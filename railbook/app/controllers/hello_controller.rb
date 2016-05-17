@@ -7,4 +7,8 @@ class HelloController < ApplicationController
   def view
     @msg = 'こんにちは、世界！a'
   end
+
+  def list
+    @books = Book.all
+  end
 end
