@@ -11,4 +11,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         redirect_to new_user_registration_url, alert: @user.errors.full_messages.join("\n")
       end
   end
+
+  def after_omniauth_failure_path_for(scope)
+    if respond_to?(:new_session_path)
+      new_session_path(scope)
+    else
+      home_index_path
+    end
+  end
 end
