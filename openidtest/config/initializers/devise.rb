@@ -281,5 +281,5 @@ Devise.setup do |config|
   #                ENV['GOOGLE_APP_SECRET'], # 環境変数に先ほど控えたシークレットを入れておく
   #                name: :google,
   #                scope: %w(email) 
-  config.omniauth :google_oauth2, "GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", { }
+  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
 end
