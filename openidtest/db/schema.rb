@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170410181439) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "users"
+    t.string   "name"
     t.string   "provider"
     t.string   "uid"
     t.string   "token"
