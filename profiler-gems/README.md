@@ -1,24 +1,29 @@
-# README
+# gem 'rack-mini-profiler'
+- 画面左上にページのロードにかかった時間が表示されるようになる。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# gem 'peek-rblineprof'
+- lineprofiler : プロファイリングの範囲
+  - app : Rails.root/(app|lib)以下のコード
+  - views : Rails.root/app/views以下のコード
+  - gems : Rails.root/vendor/gems以下のコード
+  - all : Rails.rootのすべてのコード
+  - stdlib
+- lineprofiler_mode : モード
+  - cpu : CPU Timeでプロファイリング
+  - wall : Wall-clock Timeでプロファイリング
 
-Things you may want to cover:
+# gem 'stackprof'
 
-* Ruby version
+```
+gem install stackprof
+stackprof tmp/stackprof-cpu-*.dump --text --limit 1
+stackprof tmp/stackprof-cpu-*.dump --method 'String#blank?'
+stackprof tmp/stackprof-cpu-*.dump --method 'Object#present?'
 
-* System dependencies
+# ブラウザから見る
+stackprof --flamegraph tmp/stackprof-cpu-myapp.dump > tmp/flamegraph
+stackprof --flamegraph-viewer=tmp/flamegraph
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- 参考
+  - http://qiita.com/awakia/items/248340b341f335efde16
