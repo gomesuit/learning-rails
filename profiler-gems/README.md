@@ -30,3 +30,4 @@ stackprof --flamegraph-viewer=tmp/flamegraph
 
 - 参考
   - http://qiita.com/awakia/items/248340b341f335efde16
+  - http://info.medley.jp/entry/2017/05/09/194020
