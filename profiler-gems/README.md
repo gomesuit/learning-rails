@@ -2,6 +2,9 @@
 - 画面左上にページのロードにかかった時間が表示されるようになる。
 
 # gem 'peek-rblineprof'
+- ソースコードの各行ごとの実行時間が表示される
+  - http://localhost:3000/?lineprofiler=all
+
 - lineprofiler : プロファイリングの範囲
   - app : Rails.root/(app|lib)以下のコード
   - views : Rails.root/app/views以下のコード
