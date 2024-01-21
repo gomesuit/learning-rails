@@ -2,7 +2,7 @@
 
 <h1>Articles</h1>
 
-<%= turbo_frame_tag "articles" do %>
+<%= turbo_frame_tag "articles", data: { turbo_action: :advance } do %>
   <% @articles.each do |article| %>
     <%= render article %>
     <p>

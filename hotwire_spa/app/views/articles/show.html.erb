@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= turbo_frame_tag "articles" do %>
+<%= turbo_frame_tag "articles", data: { turbo_action: :advance } do %>
   <%= render @article %>
 
   <div>
