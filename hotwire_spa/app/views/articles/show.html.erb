@@ -1,12 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<%= turbo_frame_tag "article" do %>
+<%= turbo_frame_tag "articles" do %>
   <%= render @article %>
 
   <div>
-    <%= link_to "Edit this article", edit_article_path(@article), data: { turbo_frame: "article" } %> |
-    <%= link_to "Back to articles", articles_path, data: { turbo_frame: "article" } %>
+    <%= link_to "Edit this article", edit_article_path(@article), data: { turbo_frame: "articles" } %> |
+    <%= link_to "Back to articles", articles_path, data: { turbo_frame: "articles" } %>
 
-    <%= button_to "Destroy this article", @article, method: :delete, data: { turbo_frame: "article", turbo_confirm: "Are you sure?" } %>
+    <%= button_to "Destroy this article", @article, method: :delete, data: { turbo_frame: "articles", turbo_confirm: "Are you sure?" } %>
   </div>
 <% end %>

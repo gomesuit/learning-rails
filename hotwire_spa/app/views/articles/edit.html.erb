@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "article" do %>
+<%= turbo_frame_tag "articles" do %>
   <h1>Editing article</h1>
 
   <%= render "form", article: @article %>
@@ -6,7 +6,7 @@
   <br>
 
   <div>
-    <%= link_to "Show this article", @article, data: { turbo_frame: "article" } %> |
-    <%= link_to "Back to articles", articles_path, data: { turbo_frame: "article" } %>
+    <%= link_to "Show this article", @article, data: { turbo_frame: "articles" } %> |
+    <%= link_to "Back to articles", articles_path, data: { turbo_frame: "articles" } %>
   </div>
 <% end %>
